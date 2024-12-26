@@ -1,0 +1,287 @@
+$color:$color ;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color:$color;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Small Login Icon Initially */
+.login-section {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: #c2e03b;
+    border-radius: 50%;
+    transition: width 0.3s ease, height 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.login-section:hover {
+    width: 300px;
+    height: 350px;
+    border-radius: 8px;
+}
+ 
+.login-icon img {
+    width: 100%;
+    height: auto;
+    display: flexbox;
+}
+
+/* Hidden Form Initially */
+.login-form {
+    display: none;
+    flex-direction: column;
+    padding: 20px;
+    background-color: rgb(228, 230, 148);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 8px;
+}
+
+.login-section:hover .login-form {
+    display: flex;
+}
+
+.login-form label, .login-form input, .login-form button {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.login-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-form button {
+    padding: 10px;
+    background-color:$color;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background-color: #fcfcfc;
+}
+
+
+/* Product Grid Layout */
+.products {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.product-item {
+    background-color: rgb(231, 208, 208);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 45%;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+} 
+
+.product-item:hover {
+    background-color: rgb(131, 243, 103)  ;
+    color: blue;
+    transform: scale(1.05);
+}
+
+.product-item img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.price {
+    color:$color;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.add-to-cart {
+    padding: 10px 15px;
+    background-color:$color;
+    color: white; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #555;
+}
+
+.history img{
+    float: left;
+
+}
+.history p{
+    clear: right;
+}
+
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+@media (max-width: 768px) {
+    .products {
+        flex-direction: column;
+    }
+
+    .product-item {
+        width: 100%;
+    }
+}
+contact-section {
+    padding: 50px 0;
+    background: #f08484;
+}
+
+.contact-section h2 {
+
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-section input, .contact-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-section button {
+    padding: 10px 20px;
+    background: #000000e7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contact-section button:hover{
+    background-color: rgb(204, 0, 255);
+}
+footer {
+    display: flexbox;
+    background: #f5f5f5;
+    color: hwb(0 100% 0%);
+    padding: 50px ;
+    text-align: center;
+    margin-top: 20px;
+}
+.history img{
+    float: left;
+
+}
+.history p{
+    clear: none;
+}
+
+@media (max-width: 449px) {
+    .products {
+        flex-direction: column;
+    }
+
+    .product-item {
+        width: 100%;
+    }
+}
+contact-section {
+    padding: 50px 0;
+    background: #f08484;
+}
+
+.contact-section h2 {
+
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-section input, .contact-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-section button {
+    padding: 10px 20px;
+    background: #000000e7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contact-section button:hover{
+    background-color: rgb(204, 0, 255);
+}
+footer {
+    display: flexbox;
+    background: #f5f5f5;
+    color: hwb(0 100% 0%);
+    padding: 50px ;
+    text-align: center;
+    margin-top: 20px;
+}
+.history img{
+    float: left;
+
+}
+.history p{
+    clear: none;
+}
+
